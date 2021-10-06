@@ -10,3 +10,22 @@ sudo systemctl daemon-reload
 sudo systemctl start jenkins
 sudo systemctl daemon-reload
 sudo systemctl status jenkins
+
+or
+
+yum install wget -y 
+
+yum search java | grep openjdk 
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo 
+
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key 
+
+sudo yum install jenkins java-1.8.0-openjdk-devel -y 
+
+sudo systemctl start jenkins 
+
+sudo systemctl enable jenkins 
+
+ 
+Jenkins runs on port 8080 by default 
